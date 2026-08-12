@@ -220,6 +220,63 @@ To help me tailor this preparation strategy for your upcoming rounds, how many y
 ---
 
 
+Given your 14 years of experience and core expertise in AWS, you align perfectly with the upper bracket of the AVP, Tech Lead position, leaning heavily into a Data Architect / Principal Engineer profile.
+At LPL Financial, your interview will focus less on basic coding syntax and much more on high-scale cloud patterns, architectural trade-offs, and data governance.
+## Architectural Scenarios to Prepare (AWS-Specific)
+Expect the panel to present real-world financial data challenges. Be ready to architect systems using these exact AWS patterns:
+## 1. Legacy Monolith to AWS Migration
+
+* The Scenario: Migrating a massive on-premise transactional database (e.g., legacy MS SQL Server/Oracle) to the cloud with zero downtime. [1] 
+* Your Solution: Propose using AWS DMS (Data Migration Service) for Change Data Capture (CDC) to stream live transactions into Amazon MSK (Kafka) or Amazon Kinesis. [2, 3, 4, 5] 
+* Key Detail: Explain how you handle structural changes (schema evolution) mid-stream without breaking downstream Snowflake or S3 targets.
+
+## 2. Hybrid Data Lake Architecture (S3 + Snowflake)
+
+* The Scenario: Building a regulatory-compliant data lake handling transactional, analytical, and PII data.
+* Your Solution: Detail a Medallion Architecture using Amazon S3 as the underlying storage lake, managed via the AWS Glue Data Catalog, and Snowflake for the serving layer. [6] 
+* Key Detail: Emphasize how you optimize storage costs using Parquet/ORC file formats, partition strategy by date/tenant, and lifecycle policies to glacier old compliance data.
+
+## 3. Data Governance & Regulatory Auditing
+
+* The Scenario: Ensuring the data pipeline complies with strict SEC/FINRA financial audits.
+* Your Solution: Utilize AWS Lake Formation for centralized, granular access control (row-level and column-level security).
+* Key Detail: Detail how you enforce end-to-end data lineage tracing using AWS Glue, and protect Personally Identifiable Information (PII) using AWS Secrets Manager and dynamic data masking. [7, 8, 9, 10, 11] 
+
+------------------------------
+## Expected 14+ Year Leadership Salary Package
+With 14 years of experience, you should negotiate at the highest end of the AVP band or position for a Principal Engineer equivalent package.
+
+* Base Salary (Fixed): ₹44,00,000 to ₹52,00,000 per annum.
+* Variable Bonus: 12% to 15% (linked to your delivery and company performance).
+* Total Target Compensation: ₹50,00,000 to ₹60,00,000+ per year.
+
+------------------------------
+## Your Targeted Prep Checklist
+
+* System Design: Practice sketching end-to-end AWS data pipelines on a whiteboard. Focus on decoupled architectures (e.g., decoupling compute and storage with Snowflake/S3). [12] 
+* Orchestration: Be ready to compare Apache Airflow (MWAA) vs AWS Step Functions. Know when to use state machines (event-driven microservices) vs Airflow (complex batch scheduling).
+* Coding Focus: At your level, coding rounds will focus on your ability to write highly optimized, clean Python (PySpark/Pandas) code and debug complex analytical SQL queries (window functions, query execution plans, avoiding shuffles).
+
+When is your first interview round scheduled, and would you like to practice a specific mock system design question together right now?
+
+[1] [https://www.educative.io](https://www.educative.io/blog/aws-cloud-practitioner-exam-questions-clf-c02)
+[2] [https://www.sevenmentor.com](https://www.sevenmentor.com/10-aws-interview-questions-and-answers)
+[3] [https://www.linkedin.com](https://www.linkedin.com/posts/zeeelmehta_aws-interview-questions-series-13-scenario-based-activity-7309087982962012160-1vdE)
+[4] [https://github.com](https://github.com/aws-samples/data-for-saas-patterns)
+[5] [https://quizlet.com](https://quizlet.com/722049491/aws-saa-exam-prep-flash-cards/)
+[6] [https://medium.com](https://medium.com/@phani.alapaty/from-aws-to-snowflake-a-veterans-guide-to-implementing-medallion-architecture-a8ab0e856f74)
+[7] [https://sree-chalasani.medium.com](https://sree-chalasani.medium.com/aws-organizations-aws-commerce-platform-too-tightly-coupled-and-not-coupled-enough-759a90e2f20b)
+[8] [https://cloudstoragesecurity.com](https://cloudstoragesecurity.com/news/enhance-amazon-s3-data-security-with-advanced-access-controls-and-antivirus-protection-1)
+[9] [https://www.infoq.com](https://www.infoq.com/news/2019/08/aws-lake-formation-ga/)
+[10] [https://www.whizlabs.com](https://www.whizlabs.com/blog/role-aws-lake-formation-data-lakes/)
+[11] [https://medium.com](https://medium.com/@yunusgurguz11/building-a-production-ready-data-lake-on-aws-from-kinesis-streaming-to-lake-formation-governance-ff7da510411b)
+[12] [https://saxenaashutosh.medium.com](https://saxenaashutosh.medium.com/when-the-cloud-goes-down-lessons-from-aws-outages-and-how-to-stay-resilient-a892a02e1122)
+
+
+---
+---
+
+
 
 
 
